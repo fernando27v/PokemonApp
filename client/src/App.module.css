@@ -1,0 +1,7 @@
+.app{
+    margin: 2.5rem;
+    height: 100vh;
+    background-image: url("../assets/Background.jpg");
+    background-size: 200px;
+    padding: 1rem;
+}

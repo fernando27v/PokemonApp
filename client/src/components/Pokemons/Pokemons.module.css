@@ -1,0 +1,15 @@
+.divTitles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.span{
+    padding: 0.5rem 3.5rem;
+    border: solid 0.15rem gray;
+    background-color: white;
+    font-weight: bold;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
