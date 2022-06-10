@@ -6,10 +6,30 @@
 }
 
 .span{
-    padding: 0.5rem 3.5rem;
+    padding: 0.5rem 3.2rem;
     border: solid 0.15rem gray;
     background-color: white;
     font-weight: bold;
-    min-width: 3.5rem;
-    max-width: 3.5rem;
+    padding-right: 62px;
+    padding-left: 47.5px;
+}
+
+.divPokemons{
+    overflow-y: scroll;
+    height: calc(30vh - 1.8rem);
+    display: table-caption;
+    border-bottom: solid 0.15rem gray;
+}
+
+.divPokemonsBig{
+    overflow-y: scroll;
+    height: calc(70vh - 1.8rem);
+    display: table-caption;
+    border-bottom: solid 0.15rem gray;
+}
+
+.divAll{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

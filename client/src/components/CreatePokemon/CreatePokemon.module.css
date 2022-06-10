@@ -1,0 +1,82 @@
+.divInputs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.divComponent{
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.5px;
+    padding-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    background-color: white;
+    max-width: 800px;
+}
+
+.inputText{
+    margin-right: 6rem;
+    padding: 7px;
+    border: solid rgb(117, 117, 117) 1px;
+    border-radius: 5px;
+    
+}
+
+.inputText:focus{
+    outline: none;
+    border: solid rgb(117, 117, 117) 1px;
+}
+
+.inputTextError{
+    margin-right: 6rem;
+    padding: 7px;
+    border: solid red 1px;
+    border-radius: 5px;
+}
+
+.inputTextError:focus{
+    outline: none;
+    border: solid red 1px;
+}
+
+.inputRange{
+    accent-color: #6658f6;
+}
+
+.label{
+    margin-right: 5px;
+}
+
+.button{
+    margin:1.5rem 1rem;
+    height: 2.5rem;
+    width: 7rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color:white;
+    background-color: #6658f6;
+    border-radius: 5px;
+    border: white;
+}
+
+.button:hover{
+    background-color: #382db1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:disabled{
+    background-color: #e7e8ea;
+    cursor: not-allowed;
+    transition: 0.5s;
+}
+
+.divButtons{
+    display: flex;
+}

@@ -4,4 +4,5 @@
     background-image: url("../assets/Background.jpg");
     background-size: 200px;
     padding: 1rem;
+    text-align: -webkit-center;
 }

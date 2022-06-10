@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <div>
-      <h2>Listado de Pokemon</h2>
+      <h2 style={{ textAlign: "left" }}>Listado de Pokemon</h2>
       <div className={s.header}>
         <div className={s.search}>
           <BsSearch style={{ marginRight: "10px" }} />
@@ -24,9 +24,10 @@ function Header() {
             className={s.input}
           />
         </div>
-        <Link to="/new" style={{textDecoration:"none"}}>
+        <Link to="/new" style={{ textDecoration: "none" }}>
           <button className={s.buttom}>
-            <BsPlus style={{fontSize:"30px",color:"white"}}/>Nuevo
+            <BsPlus style={{ fontSize: "30px", color: "white" }} />
+            Nuevo
           </button>
         </Link>
       </div>

@@ -1,33 +1,34 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import Pokemon from "../Pokemon/Pokemon";
-import axios from "axios";
 import s from "./Pokemons.module.css";
+import { getAllPokemons } from "../../redux/slices/pokeSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 function Pokemons() {
-  const [allPokemons, setAllPokemons] = useState([]);
-
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const allPokemons = useSelector((state) => state.pokeReducer.allPokemons);
   useEffect(() => {
-    const fetchPokemons = async () => {
-      try {
-        const res = await axios.get(
-          "https://pokemon-pichincha.herokuapp.com/pokemons/?idAuthor=1"
-        );
-        setAllPokemons(res.data);
-      } catch (e) {}
-    };
-    fetchPokemons();
+    if (allPokemons.length === 0) {
+      dispatch(getAllPokemons());
+    }
   });
-
   return (
-    <div>
+    <div className={s.divAll}>
       <div className={s.divTitles}>
         <span className={s.span}>Nombre</span>
         <span className={s.span}>Imagen</span>
         <span className={s.span}>Ataque</span>
         <span className={s.span}>Defensa</span>
-        <span className={s.span}>Acciones</span>
+        <span
+          className={s.span}
+          style={{ minWidth: "4rem", paddingLeft: "57px" }}
+        >
+          Acciones
+        </span>
       </div>
-      <div>
+      <div className={location.pathname !== "/" ? s.divPokemons : s.divPokemonsBig}>
         {allPokemons &&
           allPokemons.map((pokemon) => {
             return <Pokemon key={pokemon.id} pokemon={pokemon} />;

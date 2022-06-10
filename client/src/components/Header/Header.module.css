@@ -13,6 +13,12 @@
 .input{
     border: white;
     font-size: 18px;
+    
+}
+
+.input:focus{
+    outline: none;
+    border: solid rgb(255, 255, 255) 1px;
 }
 
 .buttom{
