@@ -2,12 +2,17 @@ import { React, useState } from "react";
 import { BsPlus, BsSearch } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import s from "./Header.module.css";
+import {useDispatch} from "react-redux";
+import {search} from "../../redux/slices/pokeSlice";
 
 function Header() {
+
   const [pokemonName, setPokemonName] = useState("");
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setPokemonName(e.target.value);
+    dispatch(search(e.target.value));
   };
 
   return (

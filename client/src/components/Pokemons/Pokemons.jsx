@@ -9,6 +9,7 @@ function Pokemons() {
   const dispatch = useDispatch();
   const location = useLocation();
   const allPokemons = useSelector((state) => state.pokeReducer.allPokemons);
+  const search = useSelector((state) => state.pokeReducer.searchPokemons);
   useEffect(() => {
     if (allPokemons.length === 0) {
       dispatch(getAllPokemons());
@@ -29,10 +30,14 @@ function Pokemons() {
         </span>
       </div>
       <div className={location.pathname !== "/" ? s.divPokemons : s.divPokemonsBig}>
-        {allPokemons &&
-          allPokemons.map((pokemon) => {
+        {search.length > 0 ?
+          search.map((pokemon) => {
             return <Pokemon key={pokemon.id} pokemon={pokemon} />;
-          })}
+          }) 
+          : allPokemons.map((pokemon) => {
+            return <Pokemon key={pokemon.id} pokemon={pokemon} />;
+          }) 
+          }
       </div>
     </div>
   );

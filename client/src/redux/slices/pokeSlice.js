@@ -92,7 +92,7 @@ const pokeSlice = createSlice({
   reducers: {
     search(state, action) {
       if (action.payload.length > 0) {
-        state.searchPokemons = state.allPokemons.map((pokemon) =>
+        state.searchPokemons = state.allPokemons.filter((pokemon) =>
           pokemon.name.toLowerCase().includes(action.payload.toLowerCase())
         );
       } else {

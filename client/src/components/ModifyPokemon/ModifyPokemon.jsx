@@ -14,7 +14,7 @@ function ModifyPokemon() {
   const [pokemon, setPokemon] = useState(p);
 
   useEffect(() => {
-    if (pokemon.id === "") {
+    if (pokemon.id === "" && id !== undefined) {
       dispatch(getPokemon(id));
       setPokemon(p);
     }

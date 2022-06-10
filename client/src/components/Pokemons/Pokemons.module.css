@@ -16,16 +16,18 @@
 
 .divPokemons{
     overflow-y: scroll;
-    height: calc(30vh - 1.8rem);
+    max-height: calc(30vh - 1.8rem);
     display: table-caption;
     border-bottom: solid 0.15rem gray;
+    border-left: solid 0.15rem gray;
 }
 
 .divPokemonsBig{
     overflow-y: scroll;
-    height: calc(70vh - 1.8rem);
+    max-height: calc(70vh - 1.8rem);
     display: table-caption;
     border-bottom: solid 0.15rem gray;
+    border-left: solid 0.15rem gray;
 }
 
 .divAll{
